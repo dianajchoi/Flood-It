@@ -14,7 +14,12 @@ public class Board {
 	
 	public void fillBoard() {
 		Random rng = new Random();
-		
+		Color[] colors = new Color[6];
+		for(int i = 0; i < board.length; ++i) {
+			for(int j = 0; j < board.length; ++j) {
+				board[i][j] = colors[rng.nextInt(6)];
+			}
+		}
 	}
 	
 	enum Color {
